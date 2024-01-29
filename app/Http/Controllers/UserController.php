@@ -9,8 +9,28 @@ class UserController extends Controller
 {
     public function index()
     {
-        $x = Post::find(1);
-        dd($x->title);
+/*         Post::create([
+            "title" => "first created title",
+            "content" => "first created content",
+            "image" => "first created image",
+            "likes" => 50,
+            "is_published" => TRUE
+        ]); */
+
+        Post::create([
+            "title"=> "second created title",
+            "content" => "second created content",
+            "image" => "second created image",
+            "likes" => 100,
+            "is_published" => TRUE
+        ]);
+
+        Post::create([
+            "title" => "drop",
+            "content" => "drop con",
+            "image" => "drop image",
+            "likes" => "ываывавы"
+        ]);
     }
 
     public function about()
@@ -20,6 +40,9 @@ class UserController extends Controller
 
     public function contact()
     {
-        return "Contact Page!";
+        $data_merge = [
+            "data" => "data1"
+        ];
+        return view("contact",compact($data_merge));
     }
 }

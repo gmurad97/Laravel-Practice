@@ -20,6 +20,4 @@ Route::get('/laravel', function () {
 
 Route::get("/home", [UserController::class, "index"]);
 Route::get("/about", [UserController::class, "about"]);
-Route::get("/contact", [UserController::class, "contact"]);
-
-Route::get("/cacl",[UserController::class,"cacl"]);
+Route::get("/contact", [UserController::class,"contact"]);
