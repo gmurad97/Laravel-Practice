@@ -1,6 +1,5 @@
 <?php
 
-use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -14,10 +13,6 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/laravel', function () {
+Route::get('/', function () {
     return view('welcome');
 });
-
-Route::get("/home", [UserController::class, "index"]);
-Route::get("/about", [UserController::class, "about"]);
-Route::get("/contact", [UserController::class,"contact"]);
