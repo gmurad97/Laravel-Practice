@@ -55,4 +55,41 @@ class HomeController extends Controller
         $deletedPost->restore();
         dd("deleted!");
     }
+
+    public function firstOrCreate()
+    {
+        $post = Post::firstOrCreate(
+            [
+                "title" => "mega title"
+            ],
+            [
+                "title" => "mega title",
+                "description" => "mega description",
+                "img" => "megaimg.jpeg",
+                "likes" => 150,
+                "dislikes" => 1,
+                "status" => TRUE,
+            ]
+        );
+
+        dd($post->title);
+    }
+
+    public function updateOrCreate()
+    {
+        $post = Post::updateOrCreate(
+            [
+                "title" => "mega title"
+            ],
+            [
+                "title" => "mega title updated",
+                "description" => "mega description updated",
+                "img" => "megaupdatedimg.jpeg",
+                "likes" => 150,
+                "dislikes" => 1,
+                "status" => FALSE,
+            ]
+        );
+        dd($post->title);
+    }
 }

@@ -28,6 +28,8 @@ Route::get("/home/create", [HomeController::class, "create"]);
 Route::get("/home/read", [HomeController::class, "read"]);
 Route::get("/home/update", [HomeController::class, "update"]);
 Route::get("/home/delete", [HomeController::class, "delete"]);
+Route::get("/home/first-or-create", [HomeController::class, "firstOrCreate"]);
+Route::get("/home/update-or-create", [HomeController::class, "updateOrCreate"]);
 
 Route::get("/shop", [ShopController::class, "index"]);
 Route::get("/category", [CategoryController::class, "index"]);
