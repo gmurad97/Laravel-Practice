@@ -20,7 +20,15 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get("/", [HomeController::class, "index"]);
+
 Route::get("/home", [HomeController::class, "index"]);
+
+//static method
+Route::get("/home/create", [HomeController::class, "create"]);
+Route::get("/home/read", [HomeController::class, "read"]);
+Route::get("/home/update", [HomeController::class, "update"]);
+Route::get("/home/delete", [HomeController::class, "delete"]);
+
 Route::get("/shop", [ShopController::class, "index"]);
 Route::get("/category", [CategoryController::class, "index"]);
 Route::get("/news", [NewsController::class, "index"]);

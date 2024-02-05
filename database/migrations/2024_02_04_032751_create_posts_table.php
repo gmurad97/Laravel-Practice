@@ -20,6 +20,9 @@ return new class extends Migration
             $table->unsignedBigInteger("dislikes");
             $table->boolean("status")->default(false);
             $table->timestamps();
+
+
+            $table->softDeletes();
         });
     }
 
