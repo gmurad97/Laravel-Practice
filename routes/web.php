@@ -21,13 +21,13 @@ use Illuminate\Support\Facades\Route;
 
 Route::get("/", [HomeController::class, "index"]);
 
-Route::get("/home", [HomeController::class, "index"]);
+Route::get("/home", [HomeController::class, "index"])->name("home.index");
 
 //static method
-Route::get("/home/create", [HomeController::class, "create"]);
-Route::get("/home/read", [HomeController::class, "read"]);
-Route::get("/home/update", [HomeController::class, "update"]);
-Route::get("/home/delete", [HomeController::class, "delete"]);
+Route::get("/home/create", [HomeController::class, "create"])->name("home.create");
+Route::get("/home/read", [HomeController::class, "read"])->name("home.read");
+Route::get("/home/update", [HomeController::class, "update"])->name("home.update");
+Route::get("/home/delete", [HomeController::class, "delete"])->name("home.delete");
 Route::get("/home/first-or-create", [HomeController::class, "firstOrCreate"]);
 Route::get("/home/update-or-create", [HomeController::class, "updateOrCreate"]);
 
