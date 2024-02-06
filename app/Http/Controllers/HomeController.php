@@ -10,8 +10,9 @@ class HomeController extends Controller
 
     public function index(){
         $posts = Post::all();
+        $footerName = "Base_footer";
         $menuItems = ['Home', 'Categories', 'Shop',"About"];
-        return view("home",compact("posts","menuItems"));
+        return view("home",compact("posts","menuItems","footerName"));
     }
 
     public function create()
