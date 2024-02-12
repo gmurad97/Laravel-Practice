@@ -13,6 +13,7 @@
                                     <div class="panel-title">
                                         <h4>Add Post</h4>
                                     </div>
+                                    {{ now()->year() }}
                                 </div>
                                 <div class="panel-body">
                                     <form>

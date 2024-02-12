@@ -5,7 +5,8 @@
             <a href="https://github.com/gmurad97">gmurad97</a>
             .
         </strong>
-        All rights reserved.
+        {{ now()->year }}
+        All rights reserved.fffffffFF
         <i class="fa fa-heart color-green"></i>
     </div>
 </footer>

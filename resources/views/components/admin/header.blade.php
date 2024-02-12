@@ -8,6 +8,10 @@
                             <i class="ti-home"></i>
                             Dasboard
                         </a>
+                        @auth
+
+                        @endauth
+                        {{ route }}
                     </li>
                     <li class="dropdown">
                         <a href="{{ route('post.list') }}" class="dropdown-toggle" data-toggle="dropdown">
