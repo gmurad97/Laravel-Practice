@@ -16,8 +16,9 @@
     <link href="{{ asset('admin/assets/dist/css/component_ui.min.css') }}" rel="stylesheet" type="text/css">
     <link href="{{ asset('admin/assets/dist/css/custom.css') }}" rel="stylesheet" type="text/css">
 </head>
+
 <body>
-    @yield("main.layout")
+    @yield('main.layout')
     <script src="{{ asset('admin/assets/plugins/jQuery/jquery-1.12.4.min.js') }}" type="text/javascript"></script>
     <script src="{{ asset('admin/assets/plugins/jquery-ui-1.12.1/jquery-ui.min.js') }}" type="text/javascript"></script>
     <script src="{{ asset('admin/assets/bootstrap/js/bootstrap.min.js') }}" type="text/javascript"></script>
