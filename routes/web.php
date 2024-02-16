@@ -16,3 +16,12 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get("/dashboard", function () {
+    return "kek";
+});
+
+Route::delete('users/{id}', function ($id) {
+});
+
+Route::delete()
