@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\ProductController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -17,32 +18,9 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-//FOR GET REQUEST ALL PRODUCTS [CONTROLLER::index]
-Route::get("/products", function () {
-    return "[GET::Request]" . url("/products");
-});
-
-//FOR GET REQUEST TARGET PRODUCT [CONTROLLER::show]
-Route::get("/products/{id}", function ($id) {
-    return "[GET::Request]" . url("/products/{$id}");
-});
-
-//FOR POST RUQUEST ADD PRODUCTS [CONTROLLER::store]
-Route::post("/products", function () {
-    return "[POST::Request]" . url("/products");
-});
-
-//FOR PUT REQUEST FULLY EDIT PRODUCT [CONTROLLER::update]
-Route::put("/products/{id}", function ($id) {
-    return "[PUT::Request]" . url("/products/{$id}");
-});
-
-//FOR PUT REQUEST PARTLY EDIT PRODUCT [CONTROLLER::update]
-Route::patch("/products/{id}", function ($id) {
-    return "[PATCH::Request]" . url("/products/{$id}");
-});
-
-//FOR DELETE REQUEST DELETE PRODUCT [CONTROLLER::destroy]
-Route::delete("/products/{id}", function ($id) {
-    return "[DELETE::Request]" . url("/products/{$id}");
-});
+Route::get("/products", [ProductController::class, "index"]);
+Route::get("/products/{id}", [ProductController::class, "show"]);
+Route::post("/products", [ProductController::class, "store"]);
+Route::put("/products/{id}", [ProductController::class, "update"]);
+Route::patch("/products/{id}", [ProductController::class, "update"]);
+Route::delete("/products/{id}", [ProductController::class, "destroy"]);
