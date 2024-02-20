@@ -2,13 +2,15 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Product;
 use Illuminate\Http\Request;
 
 class ProductController extends Controller
 {
     public function index()
     {
-        return "[ALL]Products";
+        $products = Product::all();
+        return view("Product.index", compact("products"));
     }
 
     public function show($id)
