@@ -2,24 +2,19 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Category;
+use App\Models\Product;
 use Illuminate\Http\Request;
-use JetBrains\PhpStorm\NoReturn;
 
 class CategoryController extends Controller
 {
-    public function index1():never
+    public function index()
     {
-        dd("get all data");
+        $categories = Category::all();
+        foreach ($categories as $category){
+            dump($category->name);
+        }
     }
-   #[NoReturn]public function index2():void
-    {
-        dd("get all data");
-    }
-    #[NoReturn]public function index3()
-    {
-        dd("get all data");
-    }
-
 
     public function show($id)
     {
@@ -47,6 +42,4 @@ class CategoryController extends Controller
     {
         dd("delete target data");
     }
-
-
 }

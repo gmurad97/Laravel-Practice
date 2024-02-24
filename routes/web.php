@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\CategoryController;
+use App\Http\Controllers\HomeController;
 use App\Http\Controllers\ProductController;
 use Illuminate\Support\Facades\Route;
 
@@ -15,11 +16,12 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
+Route::get('/laravel', function () {
     return view('welcome');
 });
 
 
+Route::get("/", [HomeController::class, "index"]);
 
 //Category Routes
 Route::get("/categories", [CategoryController::class, "index"]);
