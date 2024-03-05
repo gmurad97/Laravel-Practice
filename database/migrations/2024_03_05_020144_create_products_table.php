@@ -13,11 +13,8 @@ return new class extends Migration {
         Schema::create('products', function (Blueprint $table) {
             $table->id();
             $table->string("title");
-            $table->unsignedDouble("price",null,2);
-            $table->unsignedBigInteger("stock_count")->nullable();
-            $table->unsignedBigInteger("category_id")->nullable();
-            $table->unsignedDouble("rating",null,2)->nullable();
-            $table->boolean("is_published")->default(1);
+            $table->unsignedBigInteger("category_id");
+            $table->boolean("is_published")->default(true);
             $table->timestamps();
         });
     }
