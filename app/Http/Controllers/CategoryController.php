@@ -11,14 +11,14 @@ class CategoryController extends Controller
     {
         $categories = Category::all();
         foreach ($categories as $category) {
-            dump($category);
+            dump($category->getAttributes());
         }
     }
 
     public function show($id)
     {
         $category = Category::find($id);
-        dump($category);
+        dump($category->getAttributes());
     }
 
     public function store(Request $request)
