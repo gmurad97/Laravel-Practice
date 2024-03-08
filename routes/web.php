@@ -15,9 +15,41 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+
+//laravel - fakename
+//welcome - page_name
+//route_name_laravel - route name for fakename
+
 Route::get("/laravel", function () {
     return view("welcome");
+})->name("route_name_laravel");
+
+Route::get("/hello/{value?}", function ($value = null) {
+    return "hello world ".$value;
 });
+
+/* Route::get("/hello/{value}", function ($value) {
+    return "hello world ".$value;
+}); */
+
+
+/* Route::group(["prefix"=> ""], function () {
+
+}); */
+
+Route::prefix("admin")->group(function () {
+
+    Route::get("login", function(){
+        return "login page";
+    });
+
+    Route::get("register", function(){
+        return "register";
+    });
+
+});
+
+
 
 //Cateogories
 Route::get("/categories", [CategoryController::class, "index"]);

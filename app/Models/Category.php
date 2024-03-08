@@ -14,5 +14,7 @@ class Category extends Model
 
     // protected $fillable = ["name","parent_id"];
 
+
+    protected $talbe = "categories";
     protected $guarded = [];
 }
