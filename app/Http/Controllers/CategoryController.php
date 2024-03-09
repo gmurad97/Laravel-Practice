@@ -11,42 +11,45 @@ class CategoryController extends Controller
 {
     public function index()
     {
-/*         $category = Category::updateOrCreate(
-            [
-                "name" => "updated Cheyenne Romaguera Jr.",
-            ],
-            [
-                "name" => "updated change Cheyenne Romaguera Jr.",
-                "parent_id" => "2",
-                "created_at" => Carbon::now(),
-                "updated_at" => Carbon::now(),
-            ]
+        $categories = Category::all();
+        return view("category.index",compact("categories"));
 
-            //if attribute found data updated another created...
-        );
+        /*         $category = Category::updateOrCreate(
+                    [
+                        "name" => "updated Cheyenne Romaguera Jr.",
+                    ],
+                    [
+                        "name" => "updated change Cheyenne Romaguera Jr.",
+                        "parent_id" => "2",
+                        "created_at" => Carbon::now(),
+                        "updated_at" => Carbon::now(),
+                    ]
 
-        dd($category->created_at->format("Y-m-d H:i:s")); // normalize data->object
-        //devsense php no work for format(intellisense)
-        */
+                    //if attribute found data updated another created...
+                );
+
+                dd($category->created_at->format("Y-m-d H:i:s")); // normalize data->object
+                //devsense php no work for format(intellisense)
+                */
 
 
 
 
 
 
-/*         $category = Category::firstOrCreate(
-            [
-                "name" => "Cheyenne Romaguera Jr",
-            ],
-            [
-                "name" => "new Cheyenne Romaguera Jr.",
-                "parent_id" => "2",
-                "created_at" => Carbon::now(),
-                "updated_at" => Carbon::now(),
-            ]
-        );
+        /*         $category = Category::firstOrCreate(
+                    [
+                        "name" => "Cheyenne Romaguera Jr",
+                    ],
+                    [
+                        "name" => "new Cheyenne Romaguera Jr.",
+                        "parent_id" => "2",
+                        "created_at" => Carbon::now(),
+                        "updated_at" => Carbon::now(),
+                    ]
+                );
 
-        dd($category->created_at->format("Y-m-d H:i:s")); */
+                dd($category->created_at->format("Y-m-d H:i:s")); */
 
 
 
