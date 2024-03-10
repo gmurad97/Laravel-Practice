@@ -1,8 +1,13 @@
 <?php
 
 use App\Http\Controllers\CategoryController;
+use App\Http\Controllers\FormTestController;
 use App\Http\Controllers\ProductController;
 use Illuminate\Support\Facades\Route;
+
+
+Route::get("/", [FormTestController::class,
+
 
 /*
 |--------------------------------------------------------------------------
@@ -20,9 +25,16 @@ use Illuminate\Support\Facades\Route;
 //welcome - page_name
 //route_name_laravel - route name for fakename
 
-/* Route::get("/laravel", function () {
+
+
+Route::get("/laravel", function () {
     return view("welcome");
-})->name("route_name_laravel"); */
+})->name("route_name_laravel");
+
+
+Route::get("/form", [FormTestController::class, "index"])->name("form_test.index");
+
+Route::post("/form",[FormTestController::class,"post_request_func"])->name("form_test.post");
 
 /* Route::get("/hello/{value?}", function ($value = null) {
     return "hello world ".$value;

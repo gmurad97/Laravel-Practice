@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Category;
+use App\Models\Model;
 use Carbon\Carbon;
 use Illuminate\Http\Request;
 use Illuminate\Database\Eloquent\SoftDeletes;
@@ -11,8 +12,11 @@ class CategoryController extends Controller
 {
     public function index()
     {
-        $categories = Category::all();
-        return view("category.index",compact("categories"));
+        $categories = Category::query()->count();
+        dd($categories);
+
+
+        return view("category.index", compact("categories"));
 
         /*         $category = Category::updateOrCreate(
                     [
@@ -118,8 +122,7 @@ class CategoryController extends Controller
 
     public function show($id)
     {
-        $category = Category::find($id);
-        dump($category->getAttributes());
+
     }
 
     public function store(Request $request)
