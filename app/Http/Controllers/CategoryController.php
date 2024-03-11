@@ -12,11 +12,19 @@ class CategoryController extends Controller
 {
     public function index()
     {
-        $categories = Category::query()->count();
+        $categories = Category::where("id","","");
+
+
+/*         $categories = Category::find(1);
+
+        dd($categories->products()); */
+
+
+/*         $categories = Category::query()->count();
         dd($categories);
 
 
-        return view("category.index", compact("categories"));
+        return view("category.index", compact("categories")); */
 
         /*         $category = Category::updateOrCreate(
                     [

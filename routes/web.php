@@ -5,10 +5,6 @@ use App\Http\Controllers\FormTestController;
 use App\Http\Controllers\ProductController;
 use Illuminate\Support\Facades\Route;
 
-
-Route::get("/", [FormTestController::class,
-
-
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -67,7 +63,7 @@ Route::post("/form",[FormTestController::class,"post_request_func"])->name("form
 Route::get("/categories", [CategoryController::class, "index"]);
 Route::get("/categories/{id}", [CategoryController::class, "show"])->name("categories.show");
 Route::post("/categories", [CategoryController::class, "store"]);
-Route::patch("/categories/{id}", [CategoryController::class, "update"]);
+Route::put("/categories/{id}", [CategoryController::class, "update"]);
 Route::delete("/categories/{id}", [CategoryController::class, "destroy"]);
 
 //Products
