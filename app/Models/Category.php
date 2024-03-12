@@ -4,17 +4,18 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
-use Illuminate\Database\Eloquent\Collection;
-use Illuminate\Database\Eloquent\SoftDeletes;
 
 class Category extends Model
 {
     use HasFactory;
-    use SoftDeletes;
 
-    // protected $fillable = ["name","parent_id"];
+    public static function parent()
+    {
+        return self::whereNull('parent_id')->get();
+    }
 
-
-    protected $talbe = "categories";
-    protected $guarded = [];
+    public function subcategories()
+    {
+        return $this->hasMany(Category::class, "parent_id", "id");
+    }
 }

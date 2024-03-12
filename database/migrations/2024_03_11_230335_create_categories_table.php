@@ -12,9 +12,10 @@ return new class extends Migration {
     {
         Schema::create('categories', function (Blueprint $table) {
             $table->id();
-            $table->string("name");
+            $table->string('name');
+            $table->unsignedBigInteger("parent_id")->index("parent_id_index")->nullable();
             $table->timestamps();
-            $table->softDeletes();
+            $table->foreign("parent_id","categories_category_fk")->on("categories")->references("id");
         });
     }
 

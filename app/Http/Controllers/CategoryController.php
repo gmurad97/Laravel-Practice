@@ -4,27 +4,56 @@ namespace App\Http\Controllers;
 
 use App\Models\Category;
 use App\Models\Model;
+use App\Models\Product;
 use Carbon\Carbon;
 use Illuminate\Http\Request;
 use Illuminate\Database\Eloquent\SoftDeletes;
 
 class CategoryController extends Controller
 {
+
+    public function showCategories($categories)
+    {
+        $output = "<ul>";
+        foreach($categories as $category) {
+            $output .= "<li>" . $category->name . "<br>";
+            if($category->subcategories->isNotEmpty()) {
+                $output .= $this->showCategories($category->subcategories);
+            }
+            $output .= "</li>";
+        }
+        $output .= "</ul>";
+        return $output;
+    }
     public function index()
     {
-        $categories = Category::where("id","","");
+        $baseCategories = Category::parent();
+        $createShower = $this->showCategories($baseCategories);
+
+        echo $createShower;
 
 
-/*         $categories = Category::find(1);
-
-        dd($categories->products()); */
 
 
-/*         $categories = Category::query()->count();
-        dd($categories);
+/*         $product = Product::find(1);
+        dd($product->category); */
+
+/*         $products = Category::find(1);
+
+        dd($products->products); */
+        /*         $categories = Category::where("id","",""); */
 
 
-        return view("category.index", compact("categories")); */
+        /*         $categories = Category::find(1);
+
+                dd($categories->products()); */
+
+
+        /*         $categories = Category::query()->count();
+                dd($categories);
+
+
+                return view("category.index", compact("categories")); */
 
         /*         $category = Category::updateOrCreate(
                     [
