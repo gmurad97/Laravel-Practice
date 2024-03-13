@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Category;
 use App\Models\Model;
+use App\Models\Post;
 use App\Models\Product;
 use Carbon\Carbon;
 use Illuminate\Http\Request;
@@ -12,25 +13,71 @@ use Illuminate\Database\Eloquent\SoftDeletes;
 class CategoryController extends Controller
 {
 
-    public function showCategories($categories)
-    {
+
+
+
+
+
+
+
+/*     public function showSubsCategory($categories){
+
         $output = "<ul>";
-        foreach($categories as $category) {
-            $output .= "<li>" . $category->name . "<br>";
-            if($category->subcategories->isNotEmpty()) {
-                $output .= $this->showCategories($category->subcategories);
+
+        foreach($categories as $category){
+            $output .= "<li>".$category->name;
+            if($category->subcategories->isNotEmpty()){
+                $output .= $this->showSubsCategory($category->subcategories);
             }
             $output .= "</li>";
         }
+
         $output .= "</ul>";
         return $output;
-    }
+    } */
+
+
+
     public function index()
     {
-        $baseCategories = Category::parent();
+
+
+
+        $category = Category::find(1)->posts;
+
+        dd($category);
+/*         $categories = Category::all();
+        echo "<ul>";
+        foreach($categories as $category){
+            echo "<li><h4>".$category->name . "</h4>";
+            foreach($category->posts as $post){
+                echo "<p>" . $post->name ."</p>";
+            }
+            echo "</li>";
+        }
+        echo "</ul>"; */
+
+
+
+/*         $posts = Category::find(1)->posts;
+        dd($posts); */
+
+
+        /* $parentCategories = Category::whereNull("parent_id")->get(); */
+        /* dd($parentCategories); */
+        /* print($this->showSubsCategory($parentCategories)); */
+
+/*         $subs = Category::find(2)->subcategories;
+        dd($subs); */
+
+
+
+
+
+/*         $baseCategories = Category::parent();
         $createShower = $this->showCategories($baseCategories);
 
-        echo $createShower;
+        echo $createShower; */
 
 
 
