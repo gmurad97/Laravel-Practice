@@ -39,13 +39,15 @@ class CategoryController extends Controller
 
 
     public function index()
-    {
+    {/*
 
+        $subcategory = Category::find(1)->SubCategories;
+        dd($subcategory);
 
+ */
+       /*  $category = Category::find(1)->posts;
 
-        $category = Category::find(1)->posts;
-
-        dd($category);
+        dd($category); */
 /*         $categories = Category::all();
         echo "<ul>";
         foreach($categories as $category){

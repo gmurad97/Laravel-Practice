@@ -10,13 +10,13 @@ return new class extends Migration {
      */
     public function up(): void
     {
-        Schema::create('posts', function (Blueprint $table) {
+        Schema::create('categories', function (Blueprint $table) {
             $table->id();
             $table->string('name');
-            $table->unsignedBigInteger('category_id')->index("category_id_index")->nullable();
+            $table->unsignedBigInteger('parent_id')->index('parent_id_index')->nullable();
             $table->timestamps();
 
-            $table->foreign("category_id", "category_id_foreign")->on("categories")->references("id");
+            $table->foreign("parent_id","parent_id_foreign")->on("categories")->references("id");
         });
     }
 
@@ -25,6 +25,6 @@ return new class extends Migration {
      */
     public function down(): void
     {
-        Schema::dropIfExists('posts');
+        Schema::dropIfExists('categories');
     }
 };
