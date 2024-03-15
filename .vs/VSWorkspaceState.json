@@ -3,11 +3,11 @@
     "",
     "\\app",
     "\\app\\Http",
-    "\\app\\Models",
-    "\\resources",
-    "\\resources\\css",
-    "\\resources\\js"
+    "\\app\\Http\\Controllers",
+    "\\app\\Http\\Controllers\\Category",
+    "\\app\\Http\\Services\\Category",
+    "\\routes"
   ],
-  "SelectedNode": "\\resources\\css\\app.css",
+  "SelectedNode": "\\app\\Http\\Controllers\\Category\\IndexController.php",
   "PreviewInSolutionExplorer": false
 }

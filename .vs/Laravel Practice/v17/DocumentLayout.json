@@ -3,20 +3,16 @@
   "WorkspaceRootPath": "C:\\Users\\Anonymous\\Desktop\\Laravel Practice\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Anonymous\\Desktop\\Laravel Practice\\resources\\css\\app.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:resources\\css\\app.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Anonymous\\Desktop\\Laravel Practice\\app\\Http\\Controllers\\Category\\IndexController.php||{3D2461EC-8045-4AA9-ABFB-812292AE795D}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:app\\Http\\Controllers\\Category\\IndexController.php||{3D2461EC-8045-4AA9-ABFB-812292AE795D}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Anonymous\\Desktop\\Laravel Practice\\app\\Models\\Category.php||{3D2461EC-8045-4AA9-ABFB-812292AE795D}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:app\\Models\\Category.php||{3D2461EC-8045-4AA9-ABFB-812292AE795D}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Anonymous\\Desktop\\Laravel Practice\\app\\Http\\Services\\Category\\Service.php||{3D2461EC-8045-4AA9-ABFB-812292AE795D}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:app\\Http\\Services\\Category\\Service.php||{3D2461EC-8045-4AA9-ABFB-812292AE795D}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Anonymous\\Desktop\\Laravel Practice\\app\\Http\\Controllers\\CategoryController.php||{3D2461EC-8045-4AA9-ABFB-812292AE795D}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:app\\Http\\Controllers\\CategoryController.php||{3D2461EC-8045-4AA9-ABFB-812292AE795D}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Anonymous\\Desktop\\Laravel Practice\\resources\\js\\app.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:resources\\js\\app.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Anonymous\\Desktop\\Laravel Practice\\routes\\web.php||{3D2461EC-8045-4AA9-ABFB-812292AE795D}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:routes\\web.php||{3D2461EC-8045-4AA9-ABFB-812292AE795D}"
     }
   ],
   "DocumentGroupContainers": [
@@ -39,53 +35,40 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "app.css",
-              "DocumentMoniker": "C:\\Users\\Anonymous\\Desktop\\Laravel Practice\\resources\\css\\app.css",
-              "RelativeDocumentMoniker": "resources\\css\\app.css",
-              "ToolTip": "C:\\Users\\Anonymous\\Desktop\\Laravel Practice\\resources\\css\\app.css*",
-              "RelativeToolTip": "resources\\css\\app.css*",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAUAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2024-03-12T05:04:37.086Z",
+              "Title": "IndexController.php",
+              "DocumentMoniker": "C:\\Users\\Anonymous\\Desktop\\Laravel Practice\\app\\Http\\Controllers\\Category\\IndexController.php",
+              "RelativeDocumentMoniker": "app\\Http\\Controllers\\Category\\IndexController.php",
+              "ToolTip": "C:\\Users\\Anonymous\\Desktop\\Laravel Practice\\app\\Http\\Controllers\\Category\\IndexController.php*",
+              "RelativeToolTip": "app\\Http\\Controllers\\Category\\IndexController.php*",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAAAYAAAA",
+              "Icon": "89320d42-7831-4f47-839a-c227d3a60919.000001|",
+              "WhenOpened": "2024-03-15T03:58:49.267Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "Category.php",
-              "DocumentMoniker": "C:\\Users\\Anonymous\\Desktop\\Laravel Practice\\app\\Models\\Category.php",
-              "RelativeDocumentMoniker": "app\\Models\\Category.php",
-              "ToolTip": "C:\\Users\\Anonymous\\Desktop\\Laravel Practice\\app\\Models\\Category.php*",
-              "RelativeToolTip": "app\\Models\\Category.php*",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAAPAAAA",
+              "Title": "Service.php",
+              "DocumentMoniker": "C:\\Users\\Anonymous\\Desktop\\Laravel Practice\\app\\Http\\Services\\Category\\Service.php",
+              "RelativeDocumentMoniker": "app\\Http\\Services\\Category\\Service.php",
+              "ToolTip": "C:\\Users\\Anonymous\\Desktop\\Laravel Practice\\app\\Http\\Services\\Category\\Service.php",
+              "RelativeToolTip": "app\\Http\\Services\\Category\\Service.php",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "89320d42-7831-4f47-839a-c227d3a60919.000001|",
-              "WhenOpened": "2024-03-12T05:02:54.077Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "app.js",
-              "DocumentMoniker": "C:\\Users\\Anonymous\\Desktop\\Laravel Practice\\resources\\js\\app.js",
-              "RelativeDocumentMoniker": "resources\\js\\app.js",
-              "ToolTip": "C:\\Users\\Anonymous\\Desktop\\Laravel Practice\\resources\\js\\app.js",
-              "RelativeToolTip": "resources\\js\\app.js",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAQAAAAOAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
-              "WhenOpened": "2024-03-12T04:56:36.448Z",
+              "WhenOpened": "2024-03-15T03:58:41.686Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "CategoryController.php",
-              "DocumentMoniker": "C:\\Users\\Anonymous\\Desktop\\Laravel Practice\\app\\Http\\Controllers\\CategoryController.php",
-              "RelativeDocumentMoniker": "app\\Http\\Controllers\\CategoryController.php",
-              "ToolTip": "C:\\Users\\Anonymous\\Desktop\\Laravel Practice\\app\\Http\\Controllers\\CategoryController.php",
-              "RelativeToolTip": "app\\Http\\Controllers\\CategoryController.php",
-              "ViewState": "AQIAAAUAAAAAAAAAAAAcwA8AAAAFAAAA",
+              "Title": "web.php",
+              "DocumentMoniker": "C:\\Users\\Anonymous\\Desktop\\Laravel Practice\\routes\\web.php",
+              "RelativeDocumentMoniker": "routes\\web.php",
+              "ToolTip": "C:\\Users\\Anonymous\\Desktop\\Laravel Practice\\routes\\web.php",
+              "RelativeToolTip": "routes\\web.php",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABUAAAAAAAAA",
               "Icon": "89320d42-7831-4f47-839a-c227d3a60919.000001|",
-              "WhenOpened": "2024-03-12T04:50:58.874Z",
+              "WhenOpened": "2024-03-15T02:10:08.689Z",
               "EditorCaption": ""
             }
           ]
