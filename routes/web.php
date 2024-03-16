@@ -12,7 +12,7 @@ Route::group(
         "namespace" => "App\Http\Controllers\Category"
     ],
     function () {
-        Route::get('/', IndexController::class);
+        Route::get('/', IndexController::class)->name("kuska");
         Route::get('/{id}', ShowController::class);
         Route::post('/', StoreController::class);
         Route::patch('/{id}', UpdateController::class);

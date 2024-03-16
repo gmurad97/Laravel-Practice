@@ -9,7 +9,7 @@ use Illuminate\Http\Request;
 class BaseController extends Controller
 {
     /**
-     * @var Service
+     * @var Service $service
      */
     public $service;
 
