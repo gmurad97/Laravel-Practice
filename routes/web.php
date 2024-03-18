@@ -14,7 +14,7 @@ Route::group(
     function () {
         Route::get('/', IndexController::class)->name("kuska");
         Route::get('/{id}', ShowController::class);
-        Route::post('/', StoreController::class);
+        Route::post('/', StoreController::class)->name('category.store');
         Route::patch('/{id}', UpdateController::class);
         Route::delete('/{id}', DestroyController::class);
     }
