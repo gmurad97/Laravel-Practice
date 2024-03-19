@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Category;
 
 use App\Http\Controllers\Category\BaseController;
+use App\Http\Resources\AdmResource;
 use Illuminate\Http\Request;
 
 class StoreController extends BaseController
