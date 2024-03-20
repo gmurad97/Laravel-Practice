@@ -38,8 +38,8 @@
               "Title": "IndexController.php",
               "DocumentMoniker": "C:\\Users\\Anonymous\\Desktop\\Laravel Practice\\app\\Http\\Controllers\\Category\\IndexController.php",
               "RelativeDocumentMoniker": "app\\Http\\Controllers\\Category\\IndexController.php",
-              "ToolTip": "C:\\Users\\Anonymous\\Desktop\\Laravel Practice\\app\\Http\\Controllers\\Category\\IndexController.php*",
-              "RelativeToolTip": "app\\Http\\Controllers\\Category\\IndexController.php*",
+              "ToolTip": "C:\\Users\\Anonymous\\Desktop\\Laravel Practice\\app\\Http\\Controllers\\Category\\IndexController.php",
+              "RelativeToolTip": "app\\Http\\Controllers\\Category\\IndexController.php",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAAAYAAAA",
               "Icon": "89320d42-7831-4f47-839a-c227d3a60919.000001|",
               "WhenOpened": "2024-03-15T03:58:49.267Z",
@@ -55,8 +55,7 @@
               "RelativeToolTip": "app\\Http\\Services\\Category\\Service.php",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "89320d42-7831-4f47-839a-c227d3a60919.000001|",
-              "WhenOpened": "2024-03-15T03:58:41.686Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-03-15T03:58:41.686Z"
             },
             {
               "$type": "Document",
@@ -68,8 +67,7 @@
               "RelativeToolTip": "routes\\web.php",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAABUAAAAAAAAA",
               "Icon": "89320d42-7831-4f47-839a-c227d3a60919.000001|",
-              "WhenOpened": "2024-03-15T02:10:08.689Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-03-15T02:10:08.689Z"
             }
           ]
         }

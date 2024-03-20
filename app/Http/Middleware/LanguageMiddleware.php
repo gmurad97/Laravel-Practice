@@ -16,9 +16,6 @@ class LanguageMiddleware
      */
     public function handle(Request $request, Closure $next): Response
     {
-        return response()->json(['message' => 'Request prevented by middleware'], 403);
-        session()->put("lang", "english"); // set session
-        session()->get("lang"); // get session
-        //return $next($request);
+        return $next($request);
     }
 }
