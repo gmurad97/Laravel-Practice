@@ -1,10 +1,14 @@
 <?php
 
+use App\Http\Middleware\LanguageMiddleware;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/lang', function () {
+})->middleware(LanguageMiddleware::class);
 
 Route::group(
     [
