@@ -13,15 +13,16 @@ Route::get('/lang', function () {
 })->middleware(LanguageMiddleware::class);
 
 Route::get('/krot', function () {
+    /*     return storage_path(); */
     // Static
 /*     App::setLocale('az');
     return view('krot'); */
 
     //dynamic data without controller & services for fast test sorry!
-    App::setLocale('ru');
+/*     App::setLocale('ru');
     $testing = Localization::where("key",'dynamic')->get(app()->getLocale())->first();
 
-    dd($testing);
+    dd($testing); */
     // return dynamic key to value ^_^ complete
 
     /*
@@ -46,8 +47,8 @@ Route::get('/krot', function () {
     */
 });
 
-Route::get("/sess",function (){
-    session()->put("sess_custom","my_sess_value");
+Route::get("/sess", function () {
+    session()->put("sess_custom", "my_sess_value");
     dd(session()->all());
 
     //cookies put and get only sending request
@@ -59,11 +60,11 @@ Route::group(
         "namespace" => "App\Http\Controllers\Category"
     ],
     function () {
-        Route::get('/', IndexController::class)->name("kuska");
-        Route::get('/{id}', ShowController::class);
-        Route::post('/', StoreController::class)->name('category.store');
-        Route::patch('/{id}', UpdateController::class);
-        Route::delete('/{id}', DestroyController::class);
+        Route::get('/', IndexController::class)->name("kuska"); // not error, namespace in grouped!!!
+        Route::get('/{id}', ShowController::class); // not error, namespace in grouped!!!
+        Route::post('/', StoreController::class)->name('category.store'); // not error, namespace in grouped!!!
+        Route::patch('/{id}', UpdateController::class); // not error, namespace in grouped!!!
+        Route::delete('/{id}', DestroyController::class); // not error, namespace in grouped!!!
     }
 );
 
