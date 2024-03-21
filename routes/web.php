@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Middleware\LanguageMiddleware;
+use App\Models\Localization;
 use Illuminate\Support\Facades\App;
 use Illuminate\Support\Facades\Route;
 
@@ -12,8 +13,37 @@ Route::get('/lang', function () {
 })->middleware(LanguageMiddleware::class);
 
 Route::get('/krot', function () {
-    App::setLocale('az');
-    return view('krot');
+    // Static
+/*     App::setLocale('az');
+    return view('krot'); */
+
+    //dynamic data without controller & services for fast test sorry!
+    App::setLocale('ru');
+    $testing = Localization::where("key",'dynamic')->get(app()->getLocale())->first();
+
+    dd($testing);
+    // return dynamic key to value ^_^ complete
+
+    /*
+    my old method json=>json encode decode for light website
+    my new method new table and unique key pair for commercial website
+
+
+    algoritm for session
+
+    $arr = ["az", "ru", "en"];
+    $currentLang = session()->get("lang");
+    if(!in_array($currentLang, $arr)){
+        //set default lang
+        session()->put("lang","en");
+        app()->setLocale("en");
+    }
+
+    app()->setLocale("current_lang_from_Argsss")
+
+    redirect()->back();
+
+    */
 });
 
 Route::get("/sess",function (){
