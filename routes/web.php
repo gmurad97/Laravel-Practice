@@ -69,7 +69,8 @@ Route::get("/sess", function () {
 Route::group(
     [
         "prefix" => "/categories",
-        "namespace" => "App\Http\Controllers\Category"
+        "namespace" => "App\Http\Controllers\Category",
+        "middleware" => "throttle:3,1"
     ],
     function () {
         Route::get('/', IndexController::class)->name("kuska"); // not error, namespace in grouped!!!
