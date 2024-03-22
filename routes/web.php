@@ -3,16 +3,32 @@
 use App\Http\Middleware\LanguageMiddleware;
 use App\Models\Localization;
 use Illuminate\Support\Facades\App;
+use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     return view('welcome');
 });
 
+Route::get("/send-message", function () {
+    Mail::raw("ehehehe it is work!!!", function ($mail) {
+        $mail->to("murad.dev@bk.ru")->subject("Laravel");
+    });
+});
+
 Route::get('/lang', function () {
 })->middleware(LanguageMiddleware::class);
 
 Route::get('/krot', function () {
+    /*     $arr = ["az", "ru", "en"];
+        $currentLang = session()->get("lang");
+        if(!in_array($currentLang, $arr)){
+            //set default lang
+            session()->put("lang","en");
+            app()->setLocale(session()->get("lang"));
+        }
+        app()->setLocale(session()->get("lang"));
+        return view('krot'); */
     /*     return storage_path(); */
     // Static
 /*     App::setLocale('az');
