@@ -6,10 +6,6 @@ use Illuminate\Support\Facades\App;
 use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\Route;
 
-Route::get('/', function () {
-    return view('welcome');
-});
-
 Route::get("/send-message", function () {
     Mail::raw("ehehehe it is work!!!", function ($mail) {
         $mail->to("murad.dev@bk.ru")->subject("Laravel");

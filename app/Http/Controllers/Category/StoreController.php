@@ -14,13 +14,34 @@ class StoreController extends BaseController
      */
     public function __invoke(Request $request)
     {
-        if ($request->hasFile("silentFile")) {
+        //This is uploaded
+/*         if($request->hasFile("silentFile")){
             $silentFile = $request->file("silentFile");
-            $generateFileName = uniqid() . "." . $silentFile->getClientOriginalExtension();
-            $silentFile->storeAs("public/siletFile/", $generateFileName);
-            return "File Success uploaded to storage";
-        } else {
-            return "File Does not exists";
+            $generateFileName = uniqid("img")."-".date("h.i.S").$silentFile->getClientOriginalName();
+            Storage::putFileAs("pan/pan2/pan3", $silentFile ,$generateFileName);
+            return "File success uploaded to storage";
         }
+        else{
+            return "File not uploaded";
+        } */
+
+        //this is delete
+
+        /*         if(Storage::fileExists("pan/pan2/pan3/img65fe14b2cc636-11.30.ndMenlo-Regular.ttf")){
+                    Storage::delete("pan/pan2/pan3/img65fe14b2cc636-11.30.ndMenlo-Regular.ttf");
+                    return "File Successed deleted!";
+                }
+                else{
+                    return "File not found!";
+                } */
+
+
+        //download
+
+        /*         if (Storage::fileExists("uploadedSileFileFolder/img65fe1492ae0f8-11.30.ndMenlo-Regular.ttf")) {
+                    return Storage::download("uploadedSileFileFolder/img65fe1492ae0f8-11.30.ndMenlo-Regular.ttf");
+                } else {
+                    return response()->json(['message' => 'Файл не найден'], 404); // 404 and return json
+                } */
     }
 }
