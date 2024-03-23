@@ -31,6 +31,27 @@
     <div>
         {{ $categories->links() }}
         </div>
+
+
+    <div>
+        <h1 id="ajax_style"></h1>
+    </div>
+
+    <script>
+
+        let x = document.getElementById("ajax_style");
+
+        let b = fetch("http://127.0.0.1:8000/ajax",{
+            "method":"GET"
+        }).then((response)=>{
+            return response.json();
+        }).then((data)=>{
+            console.log(data);
+        });
+
+
+    </script>
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>

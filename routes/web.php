@@ -12,6 +12,10 @@ Route::get("/send-message", function () {
     });
 });
 
+Route::get("/ajax", function () {
+    return response()->json(["ajax" => "response_ajax"], 200);
+});
+
 Route::get('/lang', function () {
 })->middleware(LanguageMiddleware::class);
 
@@ -70,7 +74,7 @@ Route::group(
     [
         "prefix" => "/categories",
         "namespace" => "App\Http\Controllers\Category",
-        "middleware" => "throttle:3,1"
+        "middleware" => "throttle:100,1"
     ],
     function () {
         Route::get('/', IndexController::class)->name("kuska"); // not error, namespace in grouped!!!
