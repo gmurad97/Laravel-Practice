@@ -7,13 +7,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
 </head>
 <body>
-    <form action="{{ route('category.store') }}" method="POST" enctype="multipart/form-data">
-        @csrf
-        <input type="file" name="silentFile">
-
-        <button type="submit">Submit</button>
-    </form>
-    <table>
+    <table class="m-5">
         <tr>
             <th>Name</th>
             <th>Slug</th>
@@ -28,9 +22,9 @@
 
         </tbody>
     </table>
-    <div>
-        {{ $categories->links() }}
-        </div>
+    <div class="m-5">
+        {{ $categories->links('pagination.bootstrap-4') }}
+    </div>
 
 
     <div>
