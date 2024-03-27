@@ -10,19 +10,11 @@ class AuthController extends Controller
 {
     public function register(Request $request)
     {
-        $request->validate([
-            'name' => 'required|string|max:255',
-            'email' => 'required|string|email|unique:users,email',
-            'password' => 'required|string|min:8',
-        ]);
-
         $user = User::create([
             'name' => $request->name,
             'email' => $request->email,
             'password' => bcrypt($request->password),
         ]);
-
-        $token = $user->createToken('auth_token')->plainTextToken;
 
         $token = $user->createToken('auth_token')->plainTextToken;
 
