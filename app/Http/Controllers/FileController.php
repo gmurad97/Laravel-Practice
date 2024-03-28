@@ -14,12 +14,16 @@ class FileController extends Controller
 
     public function store(Request $request)
     {
-        if ($request->hasFile("img_file")) {
+        if($request->hasFile("img_file")){
             $file = $request->file("img_file");
             Storage::disk("public")->put("image", $file);
             return $file->hashName();
         }
 
-        return response()->json(["status" => "failed"], 400);
+        return response()->json(["status"=>"failed", 400]);
+    }
+
+    public function show($id){
+        return view("")->with("id", $id);
     }
 }
