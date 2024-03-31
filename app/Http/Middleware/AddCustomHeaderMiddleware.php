@@ -33,8 +33,5 @@ class AddCustomHeaderMiddleware
         } else {
             return response()->json(["sprite" => "not found"], 400);
         }
-
-
-
     }
 }

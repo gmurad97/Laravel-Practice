@@ -1,11 +1,42 @@
 <?php
 
+use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
-use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
 
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/str-captcha', function () {
+    return \Mews\Captcha\Facades\Captcha::create();
+});
+
+Route::get("/captcha", function () {
+    return view("form_recaptcha");
+});
+
+Route::post("/captcha/verify", function (Request $request) {
+
+    $secretKey = env("GOOGLE_RECAPTCHA_V2_SECRET_KEY");
+    $grecaptcha = $request->input("g-recaptcha-response");
+    $remoteIp = $request->ip();
+
+    $response = Http::withoutVerifying()->asForm()->post("https://www.google.com/recaptcha/api/siteverify", [
+        "secret" => $secretKey,
+        "response" => $grecaptcha,
+        "remoteip" => $remoteIp
+    ]);
+
+    $response = $response->json();
+
+    if ($response["success"]) {
+        return response()->json(["status" => "reCapTCHA verification successful. Form submitted."], 200);
+    } else {
+        return response()->json(["status" => "reCapTCHA verification failed. Please try again."], 400);
+    }
+
+
+})->name("captcha.verify");
 
 Route::get('/test', function () {
     return response()->json(["health" => "active"]);
