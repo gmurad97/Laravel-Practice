@@ -1,7 +1,27 @@
 <?php
 
+use App\Exceptions\CustomOverideException;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
+
+//Customize 404NotFound Start
+Route::fallback(function () {
+    return view("404adm");
+})->where("router", "admin.*");
+
+Route::get("/admin", function () {
+    return "admin panel ^_^";
+});
+//Customize 404NotFound end
+
+Route::get("/except", function () {
+    try {
+        return 2 / 0; //error for throwed exception
+    } catch (DivisionByZeroError $e) {
+        throw new CustomOverideException();
+    }
+    //tested!work
+});
 
 Route::get('/', function () {
     return view('welcome');
