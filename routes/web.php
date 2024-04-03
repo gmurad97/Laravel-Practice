@@ -4,6 +4,26 @@ use App\Exceptions\CustomOverideException;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
+
+Route::get("/ajax", function () {
+    return response()->json(
+        [
+            "status" => "success",
+            "response_code" => "200",
+            "user_info" => [
+                "uid" => "1",
+                "type" => "Administrator"
+            ]
+
+        ],
+        200
+    );
+});
+
+Route::get("/ajax-resp", function () {
+    return view("ajax_template");
+});
+
 //Customize 404NotFound Start
 Route::fallback(function () {
     return view("404adm");
@@ -23,9 +43,11 @@ Route::get("/except", function () {
     //tested!work
 });
 
+// laravel stock page start
 Route::get('/', function () {
     return view('welcome');
 });
+// laravel stock page end
 
 Route::get('/str-captcha', function () {
     return \Mews\Captcha\Facades\Captcha::create();
