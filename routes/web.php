@@ -3,6 +3,7 @@
 use App\Exceptions\CustomOverideException;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
+use Intervention\Image\Facades\Image;
 
 
 Route::get("/ajax", function () {
@@ -41,6 +42,14 @@ Route::get("/except", function () {
         throw new CustomOverideException();
     }
     //tested!work
+});
+
+Route::get('/resize-image', function () {
+    $image_path = storage_path("app\private\spider.jpg");
+    $image_new_path = storage_path("app\private\\resized\spider.jpg");
+    $image_ext = "jpg";
+    $image = Image::make($image_path);
+    $image->save($image_new_path,60,$image_ext);
 });
 
 // laravel stock page start
