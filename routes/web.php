@@ -1,7 +1,9 @@
 <?php
 
 use App\Exceptions\CustomOverideException;
+use App\Models\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Route;
 use Intervention\Image\Facades\Image;
 
@@ -44,12 +46,37 @@ Route::get("/except", function () {
     //tested!work
 });
 
+Route::get("/transaction", function () {
+    //DANGER!TRANSACTION!THIS CODE FROM APP/SERVICE not for use this code in route
+
+    //BeginTrasaction - for observing db changes
+    DB::beginTransaction();
+
+    try {
+        //CRUD
+        //Operation
+        User::create([
+            "name" => "for_test",
+            "email" => "for_test",
+            "password" => bcrypt("for_test"),
+        ]);
+        //success operation - commit
+        DB::commit();
+    } catch (Exception $e) {
+        //if error - rollbacked db
+        DB::rollBack();
+        Log::error("Error!", [$e->getMessage()]);
+    }
+
+
+});
+
 Route::get('/resize-image', function () {
     $image_path = storage_path("app\private\spider.jpg");
     $image_new_path = storage_path("app\private\\resized\spider.jpg");
     $image_ext = "jpg";
     $image = Image::make($image_path);
-    $image->save($image_new_path,60,$image_ext);
+    $image->save($image_new_path, 60, $image_ext);
 });
 
 // laravel stock page start
