@@ -9,7 +9,17 @@ use Illuminate\Support\Facades\Route;
 use Intervention\Image\Facades\Image;
 
 
-Route::get("/send-mail", function(){
+Route::get("/logging", function () {
+    //Only for test and view logging system;
+/*
+    Log::info("info", ["status"=>"info"]);
+    Log::error("error", ["status"=> "error"]);
+    Log::notice("notice", ["status"=> "success"]);
+    Log::log("error","log", ["status"=> "log"]);
+    Log::warning("warn", ["status"=> "warn"]); */
+});
+
+Route::get("/send-mail", function () {
     Mail::to("murad.dev@bk.ru")->send(new NotificationMail);
 });
 
