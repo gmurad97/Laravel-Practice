@@ -1,12 +1,17 @@
 <?php
 
 use App\Exceptions\CustomOverideException;
+use App\Mail\NotificationMail;
 use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Route;
 use Intervention\Image\Facades\Image;
 
+
+Route::get("/send-mail", function(){
+    Mail::to("murad.dev@bk.ru")->send(new NotificationMail);
+});
 
 Route::get("/ajax", function () {
     return response()->json(
@@ -39,7 +44,7 @@ Route::get("/admin", function () {
 
 Route::get("/except", function () {
     try {
-        return 2 / 0; //error for throwed exception
+        //return 2 / 0; //error for throwed exception
     } catch (DivisionByZeroError $e) {
         throw new CustomOverideException();
     }
