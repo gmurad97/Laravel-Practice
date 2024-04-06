@@ -8,6 +8,19 @@ use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Route;
 use Intervention\Image\Facades\Image;
 
+Route::get("/files", function () {
+    return view("form_file");
+});
+
+Route::post("/files", function (Request $request) {
+    // dd($request->all());
+    if ($request->hasFile("file_first")) {
+        foreach ($request->file("file_first") as $fileKey => $fileValue) {
+            Storage::disk("private")->putFileAs("executable", $fileValue, $fileKey);
+            dump($fileValue);
+        }
+    }
+})->name("file.type.res");
 
 Route::get("/logging", function () {
     //Only for test and view logging system;
@@ -158,3 +171,7 @@ Route::get("/keygen", function () {
     //return $stack_otp;
 
 });
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
