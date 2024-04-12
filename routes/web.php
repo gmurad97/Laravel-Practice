@@ -1,5 +1,6 @@
 <?php
 
+use App\Services\RandomStringService;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
@@ -14,6 +15,10 @@ Route::get('/post', function () {
     //or Session facades
     //Session::put('lang','en');
     return view("post_template");
+});
 
+Route::get("/rnd", function() {
 
+    $rndtor =  app(RandomStringService::class);
+    return $rndtor->generateRandomString();
 });
