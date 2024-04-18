@@ -17,8 +17,7 @@ Route::get('/post', function () {
     return view("post_template");
 });
 
-Route::get("/rnd", function() {
-
-    $rndtor =  app(RandomStringService::class);
+Route::get("/rnd", function () {
+    $rndtor = app(RandomStringService::class);
     return $rndtor->generateRandomString();
 });
