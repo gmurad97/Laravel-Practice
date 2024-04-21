@@ -3,6 +3,12 @@
 use App\Services\RandomStringService;
 use Illuminate\Support\Facades\Route;
 
+Route::get("/doc", function () {
+    // return App::environment();
+    // Config::
+    return env("APP_ENV");
+});
+
 Route::get('/', function () {
     return view('welcome');
 });
